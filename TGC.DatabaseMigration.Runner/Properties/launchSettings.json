@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "TGC.DatabaseMigration.Runner": {
+      "commandName": "Project"
+    },
+    "Upgrade": {
+      "commandName": "Project",
+      "commandLineArgs": "upgrade --release \"R2022.01.1\""
+    },
+    "Rollback": {
+      "commandName": "Project",
+      "commandLineArgs": "rollback --release \"R2022.01.1\""
+    }
+  }
+}
