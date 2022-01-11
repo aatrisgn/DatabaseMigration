@@ -1,39 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using TGC.DatabaseMigration.Runner;
-using TGC.DatabaseMigration.Runner.Interfaces;
-using System.CommandLine;
-using System.CommandLine.NamingConventionBinder;
+using Microsoft.Extensions.Options;
+using Serilog;
+using TGC.DatabaseMigration.DBUpWrapper;
+using TGC.DatabaseMigration.DBUpWrapper.Interfaces;
+using TGC.DatabaseMigration.EvolveWrapper;
+using TGC.DatabaseMigration.Shared;
 
-var rootCommand = new RootCommand
-    {
-        new Command("upgrade")
-        {
-            new Option<string>(
-            "--release",
-            description: "An option which release to work with."),
-        },
-        new Command("rollback")
-        {
-            new Option<string>(
-            "--release",
-            description: "An option which release to work with."),
-        }
-    };
+StartApplicationEvolve();
 
-rootCommand.Description = "My sample app";
-
-// Note that the parameters of the handler method are matched according to the names of the options
-rootCommand.Handler = CommandHandler.Create(() =>
-{
-    Console.WriteLine("Upgrade command");
-});
-
-StartApplication();
-
-// Parse the incoming args and invoke the handler
-var some = rootCommand.InvokeAsync(args).Result;
-
-static void StartApplication()
+static void StartApplicationDBUp()
 {
     var iocContainer = new IoCContainer();
 
@@ -48,4 +23,16 @@ static void StartApplication()
     migrationRunner.ListApplicableMigrations(upgradeEngine);
 
     migrationRunner.Run(upgradeEngine);
+}
+
+static void StartApplicationEvolve()
+{
+    var iocContainer = new IoCContainer();
+
+    var serviceProvider = iocContainer.BuildServiceProvider();
+
+    var migrationRunner = new EvolveMigrationRunner(serviceProvider.GetService<ILogger>(), serviceProvider.GetService<IOptions<AppSettings>>());
+    migrationRunner.Run();
+
+
 }

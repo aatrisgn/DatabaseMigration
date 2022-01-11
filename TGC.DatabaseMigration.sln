@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGC.DatabaseMigration.Runner", "TGC.DatabaseMigration.Runner\TGC.DatabaseMigration.Runner.csproj", "{BB5F209D-8002-43DF-9AB4-8EDAAF3E9062}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGC.DatabaseMigration.EvolveWrapper", "TGC.DatabaseMigration.EvolveWrapper\TGC.DatabaseMigration.EvolveWrapper.csproj", "{3E86A262-5B57-47E2-B11E-78031DAA42EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGC.DatabaseMigration.Runner", "TGC.DatabaseMigration.Runner\TGC.DatabaseMigration.Runner.csproj", "{8805A518-1CD3-4D89-B7BD-520054ECE91E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TGC.DatabaseMigration.DBUpWrapper", "TGC.DatabaseMigration.DBUpWrapper\TGC.DatabaseMigration.DBUpWrapper.csproj", "{2E97CD9A-F8F6-46AE-811B-ED144DF2610D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGC.DatabaseMigration.Migrations", "TGC.DatabaseMigration.Migrations\TGC.DatabaseMigration.Migrations.csproj", "{7310A860-A55C-45E8-B9D8-B6D9914C7A28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGC.DatabaseMigrations.Shared", "TGC.DatabaseMigrations.Shared\TGC.DatabaseMigrations.Shared.csproj", "{FD470F35-E14E-44A8-A08C-ECB8A910EEDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB5F209D-8002-43DF-9AB4-8EDAAF3E9062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB5F209D-8002-43DF-9AB4-8EDAAF3E9062}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB5F209D-8002-43DF-9AB4-8EDAAF3E9062}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB5F209D-8002-43DF-9AB4-8EDAAF3E9062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E86A262-5B57-47E2-B11E-78031DAA42EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E86A262-5B57-47E2-B11E-78031DAA42EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E86A262-5B57-47E2-B11E-78031DAA42EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E86A262-5B57-47E2-B11E-78031DAA42EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8805A518-1CD3-4D89-B7BD-520054ECE91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8805A518-1CD3-4D89-B7BD-520054ECE91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8805A518-1CD3-4D89-B7BD-520054ECE91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8805A518-1CD3-4D89-B7BD-520054ECE91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E97CD9A-F8F6-46AE-811B-ED144DF2610D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E97CD9A-F8F6-46AE-811B-ED144DF2610D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E97CD9A-F8F6-46AE-811B-ED144DF2610D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E97CD9A-F8F6-46AE-811B-ED144DF2610D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7310A860-A55C-45E8-B9D8-B6D9914C7A28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7310A860-A55C-45E8-B9D8-B6D9914C7A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7310A860-A55C-45E8-B9D8-B6D9914C7A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7310A860-A55C-45E8-B9D8-B6D9914C7A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD470F35-E14E-44A8-A08C-ECB8A910EEDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD470F35-E14E-44A8-A08C-ECB8A910EEDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD470F35-E14E-44A8-A08C-ECB8A910EEDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD470F35-E14E-44A8-A08C-ECB8A910EEDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

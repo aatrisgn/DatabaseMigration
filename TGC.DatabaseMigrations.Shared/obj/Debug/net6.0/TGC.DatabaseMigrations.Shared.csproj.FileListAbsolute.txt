@@ -1,0 +1,12 @@
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\bin\Debug\net6.0\TGC.DatabaseMigrations.Shared.deps.json
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\bin\Debug\net6.0\TGC.DatabaseMigrations.Shared.dll
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\bin\Debug\net6.0\ref\TGC.DatabaseMigrations.Shared.dll
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\bin\Debug\net6.0\TGC.DatabaseMigrations.Shared.pdb
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\obj\Debug\net6.0\TGC.DatabaseMigrations.Shared.csproj.AssemblyReference.cache
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\obj\Debug\net6.0\TGC.DatabaseMigrations.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\obj\Debug\net6.0\TGC.DatabaseMigrations.Shared.AssemblyInfoInputs.cache
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\obj\Debug\net6.0\TGC.DatabaseMigrations.Shared.AssemblyInfo.cs
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\obj\Debug\net6.0\TGC.DatabaseMigrations.Shared.csproj.CoreCompileInputs.cache
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\obj\Debug\net6.0\TGC.DatabaseMigrations.Shared.dll
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\obj\Debug\net6.0\ref\TGC.DatabaseMigrations.Shared.dll
+C:\DSS\DatabaseMigration\TGC.DatabaseMigrations.Shared\obj\Debug\net6.0\TGC.DatabaseMigrations.Shared.pdb

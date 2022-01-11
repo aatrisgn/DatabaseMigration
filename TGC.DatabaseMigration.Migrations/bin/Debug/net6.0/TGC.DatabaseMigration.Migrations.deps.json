@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TGC.DatabaseMigration.Migrations/1.0.0": {
+        "runtime": {
+          "TGC.DatabaseMigration.Migrations.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TGC.DatabaseMigration.Migrations/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
