@@ -1,8 +1,0 @@
-2022-01-10T21:20:52.0629650+01:00 [INF] () Executing Migrate...
-2022-01-10T21:20:52.1345301+01:00 [INF] () Evolve initialized.
-2022-01-10T21:20:52.3039928+01:00 [INF] () Mark schema dbo as empty.
-2022-01-10T21:20:52.3160784+01:00 [INF] () No metadata found.
-2022-01-10T21:20:52.3242961+01:00 [INF] () No migration script found.
-2022-01-10T21:24:54.3037135+01:00 [INF] () Executing Migrate...
-2022-01-10T21:24:54.3666443+01:00 [INF] () Evolve initialized.
-2022-01-10T21:24:54.4891672+01:00 [INF] () No metadata found.

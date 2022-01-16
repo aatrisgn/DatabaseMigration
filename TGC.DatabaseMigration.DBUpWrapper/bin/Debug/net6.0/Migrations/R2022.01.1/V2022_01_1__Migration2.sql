@@ -1,1 +1,0 @@
-﻿CREATE TABLE A2 (PersonID int);
