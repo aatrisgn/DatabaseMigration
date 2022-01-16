@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "sW9rFMxVcQBcTOvUs/Pb0n+5/sRbwjznHRCtKFttNvHJfP6DfvETR3eQD7ZR1sWvmmmenNjuhkJgMFLwwIqrTQ==",
+  "dgSpecHash": "dJx6vv0Pypjtu8ViVa02Rr1eBX8AgOpE/WaRtDVTDfh0Bk4scfWTFs9GV9DWozOt4MJ/V9VnbQ+9fMrlHGgs+A==",
   "success": true,
   "projectFilePath": "C:\\DSS\\DatabaseMigration\\TGC.DatabaseMigration.Runner\\TGC.DatabaseMigration.Runner.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\aat\\.nuget\\packages\\commandlineparser\\2.8.0\\commandlineparser.2.8.0.nupkg.sha512",
     "C:\\Users\\aat\\.nuget\\packages\\dbup\\4.5.0\\dbup.4.5.0.nupkg.sha512",
     "C:\\Users\\aat\\.nuget\\packages\\dbup-core\\4.5.0\\dbup-core.4.5.0.nupkg.sha512",
     "C:\\Users\\aat\\.nuget\\packages\\dbup-sqlserver\\4.5.0\\dbup-sqlserver.4.5.0.nupkg.sha512",

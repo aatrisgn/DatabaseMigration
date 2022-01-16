@@ -62,3 +62,4 @@ C:\DSS\DatabaseMigration\TGC.DatabaseMigration.Runner\bin\Debug\net6.0\Migration
 C:\DSS\DatabaseMigration\TGC.DatabaseMigration.Runner\bin\Debug\net6.0\Migrations\R2022.01.1\V2022_01_1__Migration2_ROLLBACK.sql
 C:\DSS\DatabaseMigration\TGC.DatabaseMigration.Runner\bin\Debug\net6.0\Migrations\R2022.02.0\V2022_02_0__Migration3.sql
 C:\DSS\DatabaseMigration\TGC.DatabaseMigration.Runner\bin\Debug\net6.0\Migrations\R2022.02.0\V2022_02_0__Migration3_ROLLBACK.sql
+C:\DSS\DatabaseMigration\TGC.DatabaseMigration.Runner\bin\Debug\net6.0\CommandLine.dll

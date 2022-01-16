@@ -25,30 +25,36 @@ namespace TGC.DatabaseMigration.DBUpWrapper.Implementations
         {
             var directoryNames = DetermineRelevantRollbackReleases(releaseNumber);
 
-            return DeployChanges.To
+            var some = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            some = Path.Combine(some, "Migrations");
+
+            var upgradeEngine = DeployChanges.To
                     .SqlDatabase(_appSettings.ConnectionString)
-                    .WithScriptsEmbeddedInAssembly(
-                        Assembly.GetExecutingAssembly(),
-                        s => PartOfRelease(s, directoryNames) && s.Contains("ROLLBACK"))
-                    .JournalToSqlTable(_appSettings.TrackedMigrations.SchemaName, _appSettings.TrackedMigrations.MigrationTable)
+                    .WithScriptsEmbeddedInAssembly(Assembly.LoadFrom("TGC.DatabaseMigration.Migrations.dll"), s => PartOfRelease(s, directoryNames) && s.Contains("ROLLBACK"))
+                    .JournalTo(new NullJournal())
                     .SetTransactionlevel(_appSettings.TrackedMigrations.TransactionLevel)
-                    .LogToConsole()
+                    .LogToSerilog(new CustomLogging(_logger))
                     .Build();
+
+            return upgradeEngine;
         }
 
         public UpgradeEngine BuildTrackedUpgradeEngine(string releaseNumber)
         {
             var directoryNames = DetermineRelevantReleases(releaseNumber);
 
-            return DeployChanges.To
+            var some = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            some = Path.Combine(some, "Migrations");
+
+            var upgradeEngine = DeployChanges.To
                     .SqlDatabase(_appSettings.ConnectionString)
-                    .WithScriptsEmbeddedInAssembly(
-                        Assembly.GetExecutingAssembly(),
-                        s => PartOfRelease(s, directoryNames) && s.Contains("ROLLBACK") == false)
-                    .JournalToSqlTable(_appSettings.TrackedMigrations.SchemaName, _appSettings.TrackedMigrations.MigrationTable)
+                    .WithScriptsEmbeddedInAssembly(Assembly.LoadFrom("TGC.DatabaseMigration.Migrations.dll"), s => PartOfRelease(s, directoryNames) && s.Contains("ROLLBACK") == false)
+                    .JournalToCustomSqlTable(_appSettings.TrackedMigrations.SchemaName, _appSettings.TrackedMigrations.MigrationTable)
                     .SetTransactionlevel(_appSettings.TrackedMigrations.TransactionLevel)
-                    .LogToConsole()
+                    .LogToSerilog(new CustomLogging(_logger))
                     .Build();
+            
+            return upgradeEngine;
         }
 
         public UpgradeEngine BuildIdempotentRollbackEngine()
@@ -87,7 +93,7 @@ namespace TGC.DatabaseMigration.DBUpWrapper.Implementations
                 releaseDirectories = releaseDirectories.OrderBy(d => d);
                 foreach (var releaseDirectory in releaseDirectories)
                 {
-                    relevantReleaseDirectories.Add(releaseDirectory);
+                    relevantReleaseDirectories.Add(releaseDirectory.Replace(".", "._"));
                     if (releaseDirectory.Contains(releaseNumber))
                     {
                         break;
@@ -110,7 +116,7 @@ namespace TGC.DatabaseMigration.DBUpWrapper.Implementations
                 releaseDirectories = releaseDirectories.OrderByDescending(d => d);
                 foreach (var releaseDirectory in releaseDirectories)
                 {
-                    relevantReleaseDirectories.Add(releaseDirectory);
+                    relevantReleaseDirectories.Add(releaseDirectory.Replace(".","._"));
                     if (releaseDirectory.Contains(releaseNumber))
                     {
                         break;

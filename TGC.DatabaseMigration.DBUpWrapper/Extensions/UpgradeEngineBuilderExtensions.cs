@@ -1,4 +1,6 @@
 ﻿using DbUp.Builder;
+using DbUp.Engine.Output;
+using DbUp.SqlServer;
 using TGC.DatabaseMigration.Shared.Models.Enums;
 
 namespace TGC.DatabaseMigration.DBUpWrapper.Extensions
@@ -21,6 +23,18 @@ namespace TGC.DatabaseMigration.DBUpWrapper.Extensions
             }
 
             return upgradeEngineBuilder;
+        }
+
+        public static UpgradeEngineBuilder JournalToCustomSqlTable(this UpgradeEngineBuilder builder, string schema, string table)
+        {
+            builder.Configure(c => c.Journal = new CustomJournal(() => c.ConnectionManager, () => c.Log, schema, table));
+            return builder;
+        }
+
+        public static UpgradeEngineBuilder LogToSerilog(this UpgradeEngineBuilder builder, CustomLogging log)
+        {
+            builder.Configure(c => c.AddLog(log));
+            return builder;
         }
     }
 }

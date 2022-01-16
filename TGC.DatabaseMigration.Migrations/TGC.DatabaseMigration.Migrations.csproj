@@ -11,4 +11,8 @@
 		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\Templates\" />
+  </ItemGroup>
 </Project>

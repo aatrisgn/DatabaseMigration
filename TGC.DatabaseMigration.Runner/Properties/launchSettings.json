@@ -3,13 +3,13 @@
     "TGC.DatabaseMigration.Runner": {
       "commandName": "Project"
     },
-    "Upgrade": {
+    "Apply": {
       "commandName": "Project",
-      "commandLineArgs": "upgrade --release \"R2022.01.1\""
+      "commandLineArgs": "Apply --release \"R2022.02.0\""
     },
     "Rollback": {
       "commandName": "Project",
-      "commandLineArgs": "rollback --release \"R2022.01.1\""
+      "commandLineArgs": "Rollback --release \"R2022.02.0\""
     }
   }
 }

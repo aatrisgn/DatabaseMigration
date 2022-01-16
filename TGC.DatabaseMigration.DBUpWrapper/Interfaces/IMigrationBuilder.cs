@@ -6,5 +6,6 @@ namespace TGC.DatabaseMigration.DBUpWrapper.Interfaces
     {
         UpgradeEngine BuildTrackedUpgradeEngine(string releaseNumber);
         UpgradeEngine BuildIdempotentUpgradeEngine();
+        UpgradeEngine BuildTrackedRollbackEngine(string releaseNumber);
     }
 }
